@@ -5,6 +5,8 @@ public class InputManager
     private InputSystem inputSystem;
     
     public Vector2 InputDirection => inputSystem.Player.Move.ReadValue<Vector2>();
+
+    public bool IsAttackPressed => inputSystem.Player.Attack.WasPressedThisFrame();
     /*! Same As:
      public Vector2 GetInputDirection()
     {

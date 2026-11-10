@@ -16,7 +16,7 @@ public class EnemyBase : MonoBehaviour
 
     private void Update()
     {
-        playerPos = (playerRef.transform.position - transform.position).normalized;
+        playerPos = playerRef.transform.position;
         transform.position = Vector3.MoveTowards(transform.position, playerPos, moveSpeed * Time.deltaTime);
     }
 }
